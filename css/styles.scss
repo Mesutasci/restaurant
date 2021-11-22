@@ -52,6 +52,25 @@ body {
   border-right: 1px solid $lt-gray;
   border-bottom: 1px solid $lt-gray;
   padding: 10px;
+
+  // color of the modal header
+  .modal-header,
+
+  // color of the close button
+  .close {
+    color: floralwhite;
+    background: rgb(81, 51, 165);
+  }
+
+  .modal-content {
+    color: floralwhite;
+    background: rgb(209, 197, 232);
+
+    // color of the label texts
+    label {
+      color: black;
+    }
+  }
 }
 
 .carousel {
@@ -74,11 +93,3 @@ body {
   bottom: 0px;
   z-index: 1;
 }
-/*Now we install the node module to support the compilation of the Scss file to a CSS file. To do this, type the following at the command prompt:
-
-npm install --save-dev node-sass@4.7.2 
-
-In order to transform the Scss file to a CSS file, type the following at the prompt:
-
-npm run scss
-*/
