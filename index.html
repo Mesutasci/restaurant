@@ -56,9 +56,12 @@
               >
             </li>
           </ul>
-          <span class="navbar-text">
-            <a href="" data-toggle="modal" data-target="#loginModal">
+          <span class="navbar-text" id="login">
+            <!-- <a href="" data-toggle="modal" data-target="#loginModal">
               <span class="fa fa-sign-in"> Login</span>
+            </a> -->
+            <a >
+              <span  class="fa fa-sign-in"> Login</span>
             </a>
           </span>
         </div>
@@ -273,14 +276,18 @@
             <img src="img/logo.png" class="img-fluid" />
           </div>
           <div class="col-12 col-sm align-self-center">
-            <a
-              role="button"
-              class="btn bnt-block btn-warning"
-              data-toggle="modal"
-              data-html="true"
-              data-placement="bottom"
-              href="#reserveTable"
-            >
+            <!-- <a
+            role="button"
+            class="btn bnt-block btn-warning"
+            data-toggle="modal"
+            data-html="true"
+            data-placement="bottom"
+            href="#reserveTable"
+          >
+            Reserve Table
+          </a> -->
+            <a role="button" id="reserve-button"
+            class="btn bnt-block btn-warning">
               Reserve Table
             </a>
           </div>
@@ -683,28 +690,30 @@
     ></script>
 
     <script>
-      // $(document).ready(function(){
-      //     $("#mycarousel").carousel( { interval: 2000 } );
-      //     $("#carousel-pause").click(function(){
+      // $("#carouselButton").click(function(){
+      //     if ($("#carouselButton").children("span").hasClass('fa-pause')) {
       //         $("#mycarousel").carousel('pause');
-      //     });
-      //     $("#carousel-play").click(function(){
+      //         $("#carouselButton").children("span").removeClass('fa-pause');
+      //         $("#carouselButton").children("span").addClass('fa-play');
+      //     }
+      //     else if ($("#carouselButton").children("span").hasClass('fa-play')){
       //         $("#mycarousel").carousel('cycle');
-      //     });
+      //         $("#carouselButton").children("span").removeClass('fa-play');
+      //         $("#carouselButton").children("span").addClass('fa-pause');                    
+      //     }
       // });
 
-      $("#carouselButton").click(function(){
-                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-                    $("#mycarousel").carousel('pause');
-                    $("#carouselButton").children("span").removeClass('fa-pause');
-                    $("#carouselButton").children("span").addClass('fa-play');
-                }
-                else if ($("#carouselButton").children("span").hasClass('fa-play')){
-                    $("#mycarousel").carousel('cycle');
-                    $("#carouselButton").children("span").removeClass('fa-play');
-                    $("#carouselButton").children("span").addClass('fa-pause');                    
-                }
-            });
+      $(document).ready(function(){
+          $("#login").click(function(){
+          $("#loginModal").modal();
+        });
+      });
+
+      $(document).ready(function(){
+          $("#reserve-button").click(function(){
+          $("#reserveTable").modal();
+        });
+      });
   </script>
 
   </body>
